@@ -81,9 +81,42 @@ function initUI() {
     }
 }
 
+// Mobile Menu Toggle
+function initMobileMenu() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const links = document.querySelectorAll('.mobile-menu a');
+
+    if (!toggle || !menu || !overlay) return;
+
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     updateDashboard();
     initUI();
-    setInterval(updateDashboard, 60000);
+    initMobileMenu();
+    setInterval(updateDashboard, 60000); // 1 minute refresh
 });
-
