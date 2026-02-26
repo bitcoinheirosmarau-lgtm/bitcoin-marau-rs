@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Marau RS | Educação & Liberdade Financeira</title>
+    <meta name="description" content="Comunidade Bitcoin em Marau RS. Educação, Economia Circular e Inovação.">
+    <meta property="og:title" content="Bitcoin Marau RS">
+    <meta property="og:description" content="Educação, liberdade e inovação. Conheça a economia circular em Marau.">
+    <meta property="og:image" content="Bitcoin Marau.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit (Moderna) e Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Decor -->
+    <div class="bg-grid"></div>
+    <div class="aurora top-[-20%] left-[-10%]"></div>
+    <div class="aurora bottom-[-20%] right-[-10%]"
+        style="background: radial-gradient(circle, var(--btc-orange) 0%, transparent 70%); animation-delay: -5s;"></div>
+
+    <!-- Header Glassmorphism -->
+    <header class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center glass">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="Bitcoin Marau.png" alt="Bitcoin Marau Logo"
+                    class="w-12 h-12 rounded-xl shadow-xl shadow-orange-500/20 object-contain bg-white/5 p-1">
+                <span class="text-xl font-black tracking-tight text-white uppercase">Bitcoin Marau</span>
+            </a>
+        </div>
+        <nav class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-widest text-slate-300">
+            <a href="index.html" class="text-orange-400 font-black">Home</a>
+            <a href="#turismo" class="hover:text-white transition-colors">Marau RS</a>
+            <a href="locais.html" class="hover:text-white transition-colors">Economia Circular</a>
+            <a href="aprenda.html" class="hover:text-white transition-colors">APRENDA BTC</a>
+            <a href="turismo.html" class="hover:text-white transition-colors">Turismo</a>
+            <a href="#dashboard" class="hover:text-white transition-colors">Dashboard</a>
+        </nav>
+        <a href="https://www.instagram.com/bitcoinmaraurs/" target="_blank"
+            class="bg-white/10 hover:bg-white text-white hover:text-black px-6 py-2.5 rounded-full font-bold text-xs transition-all border border-white/10">
+            Falar com a gente
+        </a>
+    </header>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 pt-48 pb-32 text-center flex flex-col items-center">
+            <div class="glass-light px-6 py-2 rounded-full mb-8 inline-flex items-center gap-2 border border-white/10">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-ping"></span>
+                <span class="text-[10px] font-black uppercase tracking-widest text-orange-200">Bitcoin RS • Marau &
+                    Região</span>
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black mb-10 leading-[0.95] max-w-6xl text-white">
+                Educação, liberdade <br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-200">e
+                    inovação.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mb-14 leading-relaxed font-light">
+                Capacitando a comunidade de Marau a entender e prosperar na nova economia digital através de educação
+                segura e prática.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+                <button class="btn-primary"
+                    onclick="document.getElementById('turismo').scrollIntoView({behavior: 'smooth'})">Conhecer a
+                    Comunidade</button>
+                <button
+                    class="glass px-10 py-5 rounded-2xl text-white font-bold uppercase tracking-widest text-xs hover:bg-white/5"
+                    onclick="document.getElementById('dashboard').scrollIntoView({behavior: 'smooth'})">Ver Preço
+                    Agora</button>
+            </div>
+        </section>
+
+        <!-- Live Dashboard -->
+        <section id="dashboard" class="container mx-auto px-6 py-24 scroll-mt-32">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 glass card-glass rounded-[2rem]" id="widget-price">
+                    <span class="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] block mb-6">Cotação
+                        Atual</span>
+                    <div class="text-5xl font-black mb-1 text-white" id="btc-price">Carregando...</div>
+                    <div class="text-sm font-bold mt-4" id="btc-change">...</div>
+                </div>
+
+                <div class="p-10 glass card-glass rounded-[2rem]" id="widget-fear-greed">
+                    <span
+                        class="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] block mb-6">Sentimento</span>
+                    <div class="text-3xl font-black text-white" id="fg-value">Carregando...</div>
+                    <div class="w-full h-1 bg-white/5 rounded-full mt-10 overflow-hidden">
+                        <div class="h-full bg-orange-500 transition-all duration-1000" id="fg-bar" style="width: 0%">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-10 glass card-glass rounded-[2rem]" id="widget-signal">
+                    <span class="text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] block mb-6">Status
+                        Técnico</span>
+                    <div class="text-4xl font-black text-[#1E6B5A]" id="signal-text">NEUTRO</div>
+                    <p class="text-xs text-slate-500 mt-8">Algoritmo baseado em médias exponenciais.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Turismo e Mapa em Marau -->
+        <section id="turismo" class="container mx-auto px-6 py-24 scroll-mt-32">
+            <div class="flex flex-col items-center text-center mb-16">
+                <h2 class="section-title mb-6">Bitcoin em <span class="text-orange-500">Marau RS</span></h2>
+                <p class="text-slate-400 font-light text-lg max-w-2xl italic">Explore os pontos turísticos e a crescente
+                    rede de aceitação de Bitcoin na nossa cidade.</p>
+            </div>
+
+            <!-- Mapa Centralizado e Otimizado -->
+            <div
+                class="max-w-5xl mx-auto glass-light rounded-[3rem] overflow-hidden mb-16 border border-white/10 shadow-2xl shadow-orange-500/10 relative group">
+                <!-- Overlay de proteção para facilitar o scroll -->
+                <div class="absolute inset-x-0 top-0 h-[600px] z-10 cursor-pointer pointer-events-auto group-focus-within:pointer-events-none"
+                    onclick="this.style.display='none'" title="Clique para interagir com o mapa">
+                    <div class="absolute inset-0 bg-transparent"></div>
+                </div>
+
+                <div class="h-[600px] w-full relative">
+                    <iframe
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1t1pk7aP5rFQHUDDowh70cB97Ymx6FMA&ehbc=2E312F"
+                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                </div>
+                <div class="p-10 flex flex-col md:flex-row justify-between items-center gap-8 bg-white/5">
+                    <div>
+                        <h3 class="text-3xl font-black text-white mb-2">Mapa Bitcoin Marau</h3>
+                        <p class="text-slate-400 font-light">Confira o catálogo oficial da nossa comunidade no mapa
+                            interativo.</p>
+                    </div>
+                    <a href="https://btcmap.org/community/bitcoin-marau/merchants" target="_blank"
+                        class="glass px-8 py-4 rounded-2xl text-white font-bold text-xs uppercase tracking-widest hover:bg-orange-500 hover:text-white transition-all">
+                        Veja mais no BTC Map →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rota das Salamarias Reestilizada -->
+            <div
+                class="glass-light rounded-[3rem] overflow-hidden group border border-white/5 hover:border-orange-500/20 transition-all">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="h-96 overflow-hidden">
+                        <img src="RotaDasSalamarias.jpg"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                            alt="Cultura Italiana e Gastronomia Marau">
+                    </div>
+                    <div class="p-12 flex flex-col justify-center">
+                        <div class="text-orange-500 font-black text-[10px] uppercase tracking-[0.3em] mb-4">Tradição &
+                            Gastronomia</div>
+                        <h3 class="text-4xl font-black text-white mb-6">Rota das Salamarias</h3>
+                        <p class="text-slate-400 font-light text-lg leading-relaxed mb-8">
+                            Mergulhe na autêntica cultura italiana de Marau. Uma experiência sensorial única que une
+                            vinhos artesanais, salames tradicionais e a hospitalidade que só a Serra Gaúcha oferece.
+                        </p>
+                        <a href="https://www.instagram.com/rotadassalamarias/" target="_blank"
+                            class="text-orange-400 font-black text-xs uppercase tracking-widest inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                            Conhecer no Instagram <span class="text-xl">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Lojas Bitcoin (Infinite Scroll) -->
+        <section id="lojas" class="py-24 scroll-mt-32 overflow-hidden">
+            <h2 class="section-title mb-16 text-center">Locais que aceitam BTC <br><span class="text-orange-500">em
+                    Marau</span></h2>
+
+            <div class="flex animate-marquee gap-6">
+                <!-- Loja 1: Andreolla -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🏗️</div>
+                        <a href="https://www.instagram.com/andreolla_marau/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Andreolla Marau</h4>
+                    <p class="text-xs text-slate-500 italic">Materiais de Construção</p>
+                </div>
+                <!-- Loja 2: Seu Grannèl -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">☕</div>
+                        <a href="https://www.instagram.com/seugrannel/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Seu Grannèl</h4>
+                    <p class="text-xs text-slate-500 italic">Alimentos Naturais & Café</p>
+                </div>
+                <!-- Loja 3: Wall Street Barber -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">✂️</div>
+                        <a href="https://www.instagram.com/wall_street_barber_co/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Wall Street Barber</h4>
+                    <p class="text-xs text-slate-500 italic">Barbearia Profissional</p>
+                </div>
+                <!-- Loja 4: Madeireira Conte -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🪵</div>
+                        <a href="https://www.instagram.com/madeireiraconte1999/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Madeireira Conte</h4>
+                    <p class="text-xs text-slate-500 italic">Tradição em Madeiras</p>
+                </div>
+                <!-- Loja 5: 3x4 Barbearia -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💈</div>
+                        <a href="https://www.instagram.com/3x4barbeariaclassica/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">3x4 Barbearia</h4>
+                    <p class="text-xs text-slate-500 italic">Barbearia Clássica</p>
+                </div>
+                <!-- Loja 6: Ponto Zero -->
+                <div
+                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💻</div>
+                        <a href="https://www.instagram.com/pontozeromarau/" target="_blank"
+                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                            →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Ponto Zero Marau</h4>
+                    <p class="text-xs text-slate-500 italic">Tecnologia & TI</p>
+                </div>
+                <!-- Duplicate cards for flow -->
+                <div class="glass p-8 rounded-[2rem] border-white/5 w-[300px] shrink-0">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🏗️</div>
+                        <a href="#" class="text-[10px] font-black uppercase text-orange-400">Instagram →</a>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-2">Andreolla Marau</h4>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center flex flex-col items-center gap-4">
+                <a href="https://www.instagram.com/bitcoinmaraurs/" target="_blank"
+                    class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 px-12 py-6 rounded-2xl text-white font-black text-lg shadow-2xl shadow-orange-500/30 transition-all hover:-translate-y-2 hover:scale-105 active:scale-95 group">
+                    🚀 SUA LOJA ACEITA BITCOIN? <span
+                        class="block text-xs font-bold opacity-80 mt-1 uppercase tracking-widest text-orange-100">Junte-se
+                        a nós (Não custa nada!)</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section: Imprensa & Mídia -->
+        <section id="imprensa" class="container mx-auto px-6 py-24 scroll-mt-32">
+            <h2 class="section-title mb-16 text-center">Nós na <span class="text-orange-500">Imprensa</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Entrevista Rádio -->
+                <a href="https://www.youtube.com/watch?v=7jIU6OCuy0E" target="_blank"
+                    class="glass p-10 rounded-[2.5rem] hover:bg-white/5 transition-all group flex gap-8 items-center border border-white/5 hover:border-orange-500/30">
+                    <div
+                        class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                        📻</div>
+                    <div>
+                        <h4 class="text-2xl font-black text-white mb-2">Entrevista na Rádio</h4>
+                        <p class="text-slate-500 text-sm">Confira nossa participação falando sobre a adoção do Bitcoin
+                            em Marau.</p>
+                        <span
+                            class="text-[10px] font-black uppercase text-orange-400 mt-4 block tracking-widest">Assistir
+                            no YouTube →</span>
+                    </div>
+                </a>
+                <!-- Matéria Jornal -->
+                <a href="https://www.instagram.com/p/DMu-KqTsoh_/?img_index=1" target="_blank"
+                    class="glass p-10 rounded-[2.5rem] hover:bg-white/5 transition-all group flex gap-8 items-center border border-white/5 hover:border-orange-500/30">
+                    <div
+                        class="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                        📰</div>
+                    <div>
+                        <h4 class="text-2xl font-black text-white mb-2">Matéria de Capa</h4>
+                        <p class="text-slate-500 text-sm">Bitcoin em Marau é destaque na mídia regional.</p>
+                        <span class="text-[10px] font-black uppercase text-orange-400 mt-4 block tracking-widest">Ver
+                            matéria completa →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Section: Comprar/Vender Bitcoin -->
+        <section id="negociar" class="container mx-auto px-6 py-24 scroll-mt-32">
+            <div
+                class="glass p-12 rounded-[3.5rem] border border-white/10 bg-gradient-to-br from-white/5 to-orange-500/5 relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-orange-500/10 blur-[100px] rounded-full"></div>
+
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="flex-1">
+                        <h2 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">Comprar ou Vender
+                            <br><span class="text-orange-500">Bitcoin em Marau</span>
+                        </h2>
+                        <p class="text-slate-400 text-lg mb-10 leading-relaxed font-light">
+                            Participe da nossa rede P2P local no WhatsApp para negociar diretamente com a comunidade ou
+                            utilize plataformas globais seguras.
+                        </p>
+                        <a href="https://chat.whatsapp.com/KLGupnTuy1RK4AOyNnL9nV" target="_blank"
+                            class="btn-primary inline-flex items-center gap-3">
+                            <span>Entrar no Grupo P2P</span>
+                            <span class="text-xl">💬</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-white/5 p-10 rounded-[2.5rem] border border-white/5 backdrop-blur-3xl lg:w-1/3">
+                        <h4 class="text-white font-black text-sm uppercase tracking-widest mb-8 text-center">Plataformas
+                            Recomendadas</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Bipa</div>
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Coinbase</div>
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Coinext</div>
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Binance</div>
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Nubank</div>
+                            <div
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                Spike to Spike</div>
+                        </div>
+                        <p
+                            class="text-[9px] text-slate-500 mt-8 text-center font-bold italic uppercase tracking-widest">
+                            Negocie com responsabilidade e segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 bg-black/50 backdrop-blur-3xl border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div
+                class="flex justify-center gap-12 mb-12 text-slate-500 font-black text-[10px] uppercase tracking-[0.3em]">
+                <a href="https://www.instagram.com/bitcoinmaraurs/" target="_blank"
+                    class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">Comunidade</a>
+            </div>
+            <p class="text-slate-600 text-[10px] font-bold uppercase tracking-[0.5em]">&copy; 2026 Bitcoin Marau RS •
+                Educação e Inovação.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
