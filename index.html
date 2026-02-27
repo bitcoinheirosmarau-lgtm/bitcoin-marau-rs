@@ -160,6 +160,22 @@
                         Veja mais no BTC Map →
                     </a>
                 </div>
+                <!-- Mapa Legend -->
+                <div
+                    class="px-10 py-6 border-t border-white/5 bg-black/20 flex flex-wrap gap-6 justify-center text-[10px] font-black uppercase tracking-widest">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                        <span class="text-slate-300">Locais que aceitam BTC</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                        <span class="text-slate-300">Rota das Salamarias</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                        <span class="text-slate-300">Ponto Turístico</span>
+                    </div>
+                </div>
             </div>
 
             <!-- Rota das Salamarias Reestilizada -->
@@ -167,7 +183,7 @@
                 class="glass-light rounded-[3rem] overflow-hidden group border border-white/5 hover:border-orange-500/20 transition-all">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="h-96 overflow-hidden">
-                        <img src="RotaDasSalamarias.jpg"
+                        <img src="RotaDasSalamarias_HD.png"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                             alt="Cultura Italiana e Gastronomia Marau">
                     </div>
@@ -193,88 +209,85 @@
             <h2 class="section-title mb-16 text-center">Locais que aceitam BTC <br><span class="text-orange-500">em
                     Marau</span></h2>
 
-            <div class="flex animate-marquee gap-6">
-                <!-- Loja 1: Andreolla -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🏗️</div>
-                        <a href="https://www.instagram.com/andreolla_marau/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+            <div class="carousel-container" id="stores-carousel">
+                <div class="carousel-track">
+                    <!-- Loja 1: Andreolla -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🏗️
+                            </div>
+                            <a href="https://www.instagram.com/andreolla_marau/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">Andreolla Marau</h4>
+                        <p class="text-xs text-slate-500 italic">Materiais de Construção</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">Andreolla Marau</h4>
-                    <p class="text-xs text-slate-500 italic">Materiais de Construção</p>
-                </div>
-                <!-- Loja 2: Seu Grannèl -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">☕</div>
-                        <a href="https://www.instagram.com/seugrannel/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+                    <!-- Loja 2: Seu Grannèl -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">☕</div>
+                            <a href="https://www.instagram.com/seugrannel/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">Seu Grannèl</h4>
+                        <p class="text-xs text-slate-500 italic">Alimentos Naturais & Café</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">Seu Grannèl</h4>
-                    <p class="text-xs text-slate-500 italic">Alimentos Naturais & Café</p>
-                </div>
-                <!-- Loja 3: Wall Street Barber -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">✂️</div>
-                        <a href="https://www.instagram.com/wall_street_barber_co/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+                    <!-- Loja 3: Wall Street Barber -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">✂️</div>
+                            <a href="https://www.instagram.com/wall_street_barber_co/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">Wall Street Barber</h4>
+                        <p class="text-xs text-slate-500 italic">Barbearia Profissional</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">Wall Street Barber</h4>
-                    <p class="text-xs text-slate-500 italic">Barbearia Profissional</p>
-                </div>
-                <!-- Loja 4: Madeireira Conte -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🪵</div>
-                        <a href="https://www.instagram.com/madeireiraconte1999/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+                    <!-- Loja 4: Madeireira Conte -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🪵</div>
+                            <a href="https://www.instagram.com/madeireiraconte1999/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">Madeireira Conte</h4>
+                        <p class="text-xs text-slate-500 italic">Tradição em Madeiras</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">Madeireira Conte</h4>
-                    <p class="text-xs text-slate-500 italic">Tradição em Madeiras</p>
-                </div>
-                <!-- Loja 5: 3x4 Barbearia -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💈</div>
-                        <a href="https://www.instagram.com/3x4barbeariaclassica/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+                    <!-- Loja 5: 3x4 Barbearia -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💈</div>
+                            <a href="https://www.instagram.com/3x4barbeariaclassica/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">3x4 Barbearia</h4>
+                        <p class="text-xs text-slate-500 italic">Barbearia Clássica</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">3x4 Barbearia</h4>
-                    <p class="text-xs text-slate-500 italic">Barbearia Clássica</p>
-                </div>
-                <!-- Loja 6: Ponto Zero -->
-                <div
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💻</div>
-                        <a href="https://www.instagram.com/pontozeromarau/" target="_blank"
-                            class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
-                            →</a>
+                    <!-- Loja 6: Ponto Zero -->
+                    <div
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[300px] shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">💻</div>
+                            <a href="https://www.instagram.com/pontozeromarau/" target="_blank"
+                                class="text-[10px] font-black uppercase text-orange-400 transition-transform hover:scale-110">Instagram
+                                →</a>
+                        </div>
+                        <h4 class="text-lg font-black text-white mb-2">Ponto Zero Marau</h4>
+                        <p class="text-xs text-slate-500 italic">Tecnologia & TI</p>
                     </div>
-                    <h4 class="text-lg font-black text-white mb-2">Ponto Zero Marau</h4>
-                    <p class="text-xs text-slate-500 italic">Tecnologia & TI</p>
-                </div>
-                <!-- Duplicate cards for flow -->
-                <div class="glass p-8 rounded-[2rem] border-white/5 w-[300px] shrink-0">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">🏗️</div>
-                        <a href="#" class="text-[10px] font-black uppercase text-orange-400">Instagram →</a>
-                    </div>
-                    <h4 class="text-lg font-black text-white mb-2">Andreolla Marau</h4>
                 </div>
             </div>
+            <p class="text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em] mt-8 italic">Arraste
+                para o lado para ver mais.</p>
 
             <div class="mt-20 text-center flex flex-col items-center gap-4">
                 <a href="https://www.instagram.com/bitcoinmaraurs/" target="_blank"
@@ -345,24 +358,24 @@
                     <div class="bg-white/5 p-10 rounded-[2.5rem] border border-white/5 backdrop-blur-3xl lg:w-1/3">
                         <h4 class="text-white font-black text-sm uppercase tracking-widest mb-8 text-center">Plataformas
                             Recomendadas</h4>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-4 platform-grid">
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Bipa</div>
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Coinbase</div>
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Coinext</div>
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Binance</div>
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Nubank</div>
                             <div
-                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5">
+                                class="glass-light p-4 rounded-xl text-center text-[10px] font-bold text-white uppercase border border-white/5 flex items-center justify-center">
                                 Spike to Spike</div>
                         </div>
                         <p

@@ -81,64 +81,61 @@
         <div class="mb-32">
             <h2 class="text-sm font-black text-orange-500 uppercase tracking-[0.5em] text-center mb-12">Canais
                 Recomendados</h2>
-            <div class="flex animate-marquee gap-6">
-                <!-- Canal 1: Criptomaniacos -->
-                <a href="https://www.youtube.com/@CRIPTOMANIACOS" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-red-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">📊</div>
-                    <h4 class="text-xl font-black text-white mb-2">Criptomaníacos</h4>
-                    <p class="text-xs text-slate-500">Análises gráficas e inteligência de mercado.</p>
-                </a>
-                <!-- Canal 2: Rolante RS -->
-                <a href="https://www.youtube.com/watch?v=2r5D5zpujmY&t=1s" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">🏡</div>
-                    <h4 class="text-xl font-black text-white mb-2">Bitcoin em Rolante RS</h4>
-                    <p class="text-xs text-slate-500">Documentário sobre a maior economia circular do BR.</p>
-                </a>
-                <!-- Canal 3: Fernando Ulrich -->
-                <a href="https://www.youtube.com/@FernandoUlrichCanal" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">📉</div>
-                    <h4 class="text-xl font-black text-white mb-2">Fernando Ulrich</h4>
-                    <p class="text-xs text-slate-500">Economia sob a ótica da escola austríaca.</p>
-                </a>
-                <!-- Canal 4: Bruno Perini -->
-                <a href="https://www.youtube.com/@brunoperini" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">💰</div>
-                    <h4 class="text-xl font-black text-white mb-2">Bruno Perini</h4>
-                    <p class="text-xs text-slate-500">Educação financeira e empreendedorismo.</p>
-                </a>
-                <!-- Canal 5: Area Bitcoin -->
-                <a href="https://www.youtube.com/@AreaBitcoin" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">📚</div>
-                    <h4 class="text-xl font-black text-white mb-2">Área Bitcoin</h4>
-                    <p class="text-xs text-slate-500">Aulas completas sobre o funcionamento do protocolo.</p>
-                </a>
-                <!-- Canal 6: Bitcoinheiros -->
-                <a href="https://www.youtube.com/@Bitcoinheiros" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">🤓</div>
-                    <h4 class="text-xl font-black text-white mb-2">Bitcoinheiros</h4>
-                    <p class="text-xs text-slate-500">Debates técnicos profundos para nerds do BTC.</p>
-                </a>
-                <!-- Canal 7: Discípulo de Satoshi -->
-                <a href="https://www.youtube.com/@discipulo-de-satoshi/videos" target="_blank"
-                    class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">📜</div>
-                    <h4 class="text-xl font-black text-white mb-2">Discípulo de Satoshi</h4>
-                    <p class="text-xs text-slate-500">Vídeos focados em soberania e fundamentos.</p>
-                </a>
-                <!-- Repetição para o scroll infinito -->
-                <div class="glass p-8 rounded-[2rem] border-white/5 w-[320px] shrink-0">
-                    <div class="text-3xl mb-4">📊</div>
-                    <h4 class="text-xl font-black text-white mb-2">Criptomaníacos</h4>
+            <div class="carousel-container" id="channels-carousel">
+                <div class="carousel-track">
+                    <!-- Canal 1: Criptomaniacos -->
+                    <a href="https://www.youtube.com/@CRIPTOMANIACOS" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-red-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">📊</div>
+                        <h4 class="text-xl font-black text-white mb-2">Criptomaníacos</h4>
+                        <p class="text-xs text-slate-500">Análises gráficas e inteligência de mercado.</p>
+                    </a>
+                    <!-- Canal 2: Rolante RS -->
+                    <a href="https://www.youtube.com/watch?v=2r5D5zpujmY&t=1s" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">🏡</div>
+                        <h4 class="text-xl font-black text-white mb-2">Bitcoin em Rolante RS</h4>
+                        <p class="text-xs text-slate-500">Documentário sobre a maior economia circular do BR.</p>
+                    </a>
+                    <!-- Canal 3: Fernando Ulrich -->
+                    <a href="https://www.youtube.com/@FernandoUlrichCanal" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">📉</div>
+                        <h4 class="text-xl font-black text-white mb-2">Fernando Ulrich</h4>
+                        <p class="text-xs text-slate-500">Economia sob a ótica da escola austríaca.</p>
+                    </a>
+                    <!-- Canal 4: Bruno Perini -->
+                    <a href="https://www.youtube.com/@brunoperini" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">💰</div>
+                        <h4 class="text-xl font-black text-white mb-2">Bruno Perini</h4>
+                        <p class="text-xs text-slate-500">Educação financeira e empreendedorismo.</p>
+                    </a>
+                    <!-- Canal 5: Area Bitcoin -->
+                    <a href="https://www.youtube.com/@AreaBitcoin" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">📚</div>
+                        <h4 class="text-xl font-black text-white mb-2">Área Bitcoin</h4>
+                        <p class="text-xs text-slate-500">Aulas completas sobre o funcionamento do protocolo.</p>
+                    </a>
+                    <!-- Canal 6: Bitcoinheiros -->
+                    <a href="https://www.youtube.com/@Bitcoinheiros" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">🤓</div>
+                        <h4 class="text-xl font-black text-white mb-2">Bitcoinheiros</h4>
+                        <p class="text-xs text-slate-500">Debates técnicos profundos para nerds do BTC.</p>
+                    </a>
+                    <!-- Canal 7: Discípulo de Satoshi -->
+                    <a href="https://www.youtube.com/@discipulo-de-satoshi/videos" target="_blank"
+                        class="glass p-8 rounded-[2rem] border-white/5 hover:border-orange-500/30 transition-all w-[320px] shrink-0">
+                        <div class="text-3xl mb-4">📜</div>
+                        <h4 class="text-xl font-black text-white mb-2">Discípulo de Satoshi</h4>
+                        <p class="text-xs text-slate-500">Vídeos focados em soberania e fundamentos.</p>
+                    </a>
                 </div>
             </div>
-            <p class="text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em] mt-12 italic">Passe o
-                mouse para pausar o carrossel.</p>
+            <p class="text-center text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em] mt-8 italic">Arraste
+                para o lado para ver mais.</p>
         </div>
     </main>
 
@@ -147,6 +144,7 @@
             &copy; 2026 Bitcoin Marau RS • Educação e Inovação.
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

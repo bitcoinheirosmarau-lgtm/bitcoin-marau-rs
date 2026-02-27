@@ -164,6 +164,59 @@ section {
     header {
         padding: 1rem !important;
     }
+
+    #btc-price {
+        font-size: 2.5rem !important;
+        line-height: 1;
+    }
+
+    .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .platform-grid>div {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Draggable Carousel Implementation */
+.carousel-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    padding: 20px 0;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.carousel-container.active {
+    cursor: grabbing;
+    transform: scale(0.99);
+}
+
+.carousel-track {
+    display: inline-flex;
+    gap: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    pointer-events: none;
+}
+
+.carousel-track>* {
+    pointer-events: auto;
 }
 
 /* Mobile Menu Drawer */
